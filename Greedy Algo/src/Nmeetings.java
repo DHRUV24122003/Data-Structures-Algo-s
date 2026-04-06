@@ -1,4 +1,3 @@
-package Greedy;
 import java.util.*;
 
 class Meeting {
