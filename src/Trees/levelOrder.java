@@ -80,3 +80,49 @@ public class levelOrder {
 //            return result;
 //        }
 //    }
+
+
+
+
+// by recursion method
+
+
+//class Solution {
+//
+//    public static List<List<Integer>> LevelOrder(Node root) {
+//        List<List<Integer>> result = new ArrayList<>();
+//        if (root == null) return result;
+//
+//        // Helper function ko call kar rahe hain
+//        // Level 0 se shuru kar rahe hain
+//        helper(root, 0, result);
+//        return result;
+//    }
+//
+//    // =====================================================
+//    // RECURSIVE HELPER FUNCTION
+//    // =====================================================
+//    private static void helper(Node node, int level, List<List<Integer>> result) {
+//
+//        // Base case: agar node null hai toh return kar do
+//        if (node == null) {
+//            return;
+//        }
+//
+//        // Agar result list mein is level ke liye abhi tak koi list nahi bani hai
+//        // toh ek naya ArrayList bana do
+//        if (result.size() == level) {
+//            result.add(new ArrayList<>());
+//        }
+//
+//        // Current node ki value uske level ki list mein add kar do
+//        result.get(level).add(node.data);
+//
+//        // =============================================
+//        // LEFT aur RIGHT recursion call
+//        // Level + 1 pass kar rahe hain kyunki neeche wala level hai
+//        // =============================================
+//        helper(node.left, level + 1, result);   // Left subtree
+//        helper(node.right, level + 1, result);  // Right subtree
+//    }
+//}
