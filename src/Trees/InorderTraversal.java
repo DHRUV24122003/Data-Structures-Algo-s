@@ -32,7 +32,7 @@ public class InorderTraversal {
             root.right = new Node(15);
             root.right.right = new Node(20);
 
-            System.out.println("Inorder Traversal:");
+            System.out.println("Inorder Traversal:" );
             printInorder(root);
         }
     }
