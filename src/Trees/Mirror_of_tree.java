@@ -15,7 +15,7 @@ package Trees;
 
 public class Mirror_of_tree {
 
-    public Node createMirror(Node root) {
+    public Node createMirror(Node root) {//ek function banaya create mirror naam ka
 
         // Base Case: Agar node null hai toh null return karo
         if (root == null) {
