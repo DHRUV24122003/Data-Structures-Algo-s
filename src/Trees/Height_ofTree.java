@@ -13,13 +13,13 @@ public class Height_ofTree {
             this.right = null;
         }
     }
-    public static int maxDepth(TreeNode root) {
-        if (root == null) {
+    public static int maxDepth(TreeNode root) {//make a function and pass the node
+        if (root == null) {//base case agar root hi nahi hai to -1 return kardo
             return -1; // Empty tree has height -1
         }
 
-        int leftHeight = maxDepth(root.left);
-        int rightHeight = maxDepth(root.right);
+        int leftHeight = maxDepth(root.left);//initialize height of left tree as maxdepth(root.left), means maximum death of left subtree
+        int rightHeight = maxDepth(root.right);//initialize height of right tree by it's max depth
 
         return 1 + Math.max(leftHeight, rightHeight);
     }
@@ -39,6 +39,7 @@ public class Height_ofTree {
         root.right = new TreeNode(3);
         root.left.left = new TreeNode(4);
         root.left.right = new TreeNode(5);
+        root.left.right.right = new TreeNode(6);
 
         // Calling the function
         int height = maxDepth(root);
