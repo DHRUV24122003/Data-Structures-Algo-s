@@ -58,5 +58,9 @@ public class RightViewBinaryTree {
         System.out.println("Right View: " + rightViewList);
         // Output: [1, 3, 6]
     }
+
 }
+
+
+
 
