@@ -8,7 +8,7 @@ public class ZigZagLevelOrder {
     public List<Integer> zigzagLevelOrder(Node root) {
         List<Integer> result = new ArrayList<>();
         if (root == null) return result;
-
+ 
         Queue<Node> queue = new LinkedList<>();
         queue.offer(root);
         boolean leftToRight = true;   // Level 1 is odd → Left to Right
