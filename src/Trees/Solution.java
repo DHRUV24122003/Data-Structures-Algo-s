@@ -91,7 +91,7 @@ TreeNode(int val) { this.val = val; }
             4   5   6
                / \
               7   8
-        */
+        *///
 
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
