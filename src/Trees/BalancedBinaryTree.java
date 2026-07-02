@@ -1,7 +1,11 @@
 package Trees;
 
-public class BalancedBinaryTree {
 
+
+
+
+public class BalancedBinaryTree {
+         // a balanced binary tree is a tree which is having a height difference 1 or 0 between it's left and right subtree
 
         // TreeNode definition
         static class TreeNode {
@@ -18,6 +22,7 @@ public class BalancedBinaryTree {
 
         // Main function to check if tree is height-balanced
         public static boolean isBalanced(TreeNode root) {
+
             return checkHeight(root) != -1;
         }
 
@@ -101,4 +106,15 @@ public class BalancedBinaryTree {
             System.out.println("Example 5 (Balanced): " + isBalanced(root5));  // Expected: true
         }
     }
+
+
+    //summary of the solution
+//check the height difference at each node and if it comes out to be more than 1 return unbalanced
+//make a function which checks the height of of tree at each node
+//initialize leftheight with left node inside the function int leftHeight = checkHeight(root.left), and if it is -1 then return -1;
+//same for the rightNode
+//Now check the height differences if (Math.abs(leftHeight - rightHeight) > 1) {
+//            return -1;
+//        }
+//return the maximum from leftheight and rightheight (return Math.max(leftHeight, rightHeight) + 1;)
 
