@@ -1,17 +1,17 @@
 package Trees;
 
 import java.util.*;
-import java.util.Arrays;
-import java.util.List;
 
 public class ZigZagLevelOrder {
-    public List<Integer> zigzagLevelOrder(Node root) {
-        List<Integer> result = new ArrayList<>();
+
+    // ==================== Main ZigZag Function ====================
+    public List<List<Integer>> zigzagLevelOrder(Node root) {
+        List<List<Integer>> result = new ArrayList<>();
         if (root == null) return result;
- 
+
         Queue<Node> queue = new LinkedList<>();
         queue.offer(root);
-        boolean leftToRight = true;   // Level 1 is odd → Left to Right
+        int level = 1;                    // Level 1 is odd → Left to Right
 
         while (!queue.isEmpty()) {
             int levelSize = queue.size();
@@ -25,18 +25,19 @@ public class ZigZagLevelOrder {
                 if (node.right != null) queue.offer(node.right);
             }
 
-            // Reverse for even levels (Right to Left)
-            if (!leftToRight) {
+            // Reverse only for even levels (Right to Left)
+            if (level % 2 == 0) {
                 Collections.reverse(currentLevel);
             }
 
-            result.addAll(currentLevel);
-            leftToRight = !leftToRight;
+            result.add(currentLevel);
+            level++;
         }
 
         return result;
     }
 
+    // ==================== Helper: Build Tree from Level Order ====================
     public static Node buildTreeFromLevelOrder(Integer[] arr) {
         if (arr == null || arr.length == 0 || arr[0] == null) return null;
 
@@ -63,21 +64,53 @@ public class ZigZagLevelOrder {
         return root;
     }
 
+    // ==================== Main Method for Testing ====================
+    public static void main(String[] args) {
+        ZigZagLevelOrder solution = new ZigZagLevelOrder();
 
-// ==================== Main method for testing ====================
-public static void main(String[] args) {
-    Integer[] input = {1, 2, 3, 4, 5, 6, 7};
-    Node root = buildTreeFromLevelOrder(input);
+        // Test Case 1
+        Integer[] input1 = {1, 2, 3, 4, 5, 6, 7};
+        Node root1 = buildTreeFromLevelOrder(input1);
+        List<List<Integer>> output1 = solution.zigzagLevelOrder(root1);
 
-    ZigZagLevelOrder solution = new ZigZagLevelOrder();
-    List<Integer> output = solution.zigzagLevelOrder(root);
+        System.out.println("=== Test Case 1 ===");
+        System.out.println("Input Tree (Level Order): " + Arrays.toString(input1));
+        System.out.println("Zigzag Output: " + output1);
+        System.out.println("Expected:        [[1], [3, 2], [4, 5, 6, 7]]");
+        System.out.println();
 
-    System.out.println("Input:  " + Arrays.toString(input));
-    System.out.println("Output: " + output);
+        // Test Case 2 (Classic Example)
+        Integer[] input2 = {3, 9, 20, null, null, 15, 7};
+        Node root2 = buildTreeFromLevelOrder(input2);
+        List<List<Integer>> output2 = solution.zigzagLevelOrder(root2);
 
+        System.out.println("=== Test Case 2 ===");
+        System.out.println("Input Tree (Level Order): " + Arrays.toString(input2));
+        System.out.println("Zigzag Output: " + output2);
+        System.out.println("Expected:        [[3], [20, 9], [15, 7]]");
+    }
 }
     // Expected: [1, 3, 2, 4, 5, 6, 7]
 
 
 
-}
+//summary of the question
+//make a list type function
+//make a list which store the result - result
+//Make a queue and add the root to it
+//if queue is not empty the initialize level size with the queue.size() and make a new list -> currentlevel
+//if node.left is not equal to null add node.left in queue , and
+//if node.right is not equal to null add node.right to the queue
+//and if level is even(if (level % 2 == 0) then reverse the currentlevel list - Collections.reverse(currentLevel);
+//add the result in list currentlevel and increase the level count by 1
+//make a binary tree assign it's values
+
+
+
+
+//Approach
+
+//Do normal level order traversal using a Queue (always visits left to right).
+//Collect nodes of current level in a list.
+//If the level is even → reverse the list before adding to result.
+//Children are always enqueued left → right.
