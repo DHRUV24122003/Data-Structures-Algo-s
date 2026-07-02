@@ -80,3 +80,14 @@ public class DiagonalTraversalClean {
     }
 }
 
+
+//summary of this question
+//make an arraylist type function
+//make a result arraylist
+//make a queue and put the root node in that queue
+//start a while loop where , until the queue is not empty get the current element from the queue
+//q.poll
+//while current is not equal to null -> result.add(curr.data) , add the value of current node in the list
+//curr = curr.right;
+//return result;
+

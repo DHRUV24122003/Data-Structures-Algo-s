@@ -118,3 +118,7 @@ public class BalancedBinaryTree {
 //        }
 //return the maximum from leftheight and rightheight (return Math.max(leftHeight, rightHeight) + 1;)
 
+
+
+//this can be solved by 3 ways
+
