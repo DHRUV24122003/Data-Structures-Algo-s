@@ -65,5 +65,6 @@ class CheckGraphIsTree {
         // adj.get(1).add(2); adj.get(2).add(1);
         // adj.get(2).add(0); adj.get(0).add(2); // Cycle
         // System.out.println("Is Tree? " + isTree(n, adj));  // Output: false
+        //
     }
 }
