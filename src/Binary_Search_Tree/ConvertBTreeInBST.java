@@ -84,3 +84,8 @@ public class ConvertBTreeInBST {
     }
 }
 
+
+//approach - > traverse the bt in inorder
+//sort the list
+//assign the nodes to the tree in inorder
+
