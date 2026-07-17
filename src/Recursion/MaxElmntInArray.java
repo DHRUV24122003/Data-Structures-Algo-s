@@ -17,3 +17,16 @@ public class MaxElmntInArray {
 
 
 }
+
+
+//if we have to find the min
+//static int findMin(int[] arr, int index) {
+//    // Base Case
+//    if (index == arr.length - 1) {
+//        return arr[index];
+//    }
+//
+//    // Recursive Case
+//    int minInRest = findMin(arr, index + 1);
+//    return Math.min(arr[index], minInRest);
+//}
