@@ -40,6 +40,7 @@ public class HashMapExample {
 //map.remove(key)
 //map.size(key)
 //map.clear()
+//map.keyset() : Dictionary ke saare words (keys) ki list
 
 
 
