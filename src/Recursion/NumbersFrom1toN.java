@@ -7,9 +7,9 @@ public class NumbersFrom1toN {
             return;
         }
         //now run the recursive function
-        System.out.print( n + " "); // printing the numbers
+        //System.out.print( n + " "); // printing the numbers
         printNumbers(n-1); //recursive function will call itself until the base condition gets executed
-        System.out.println(n + " "); // printing the numbers
+        System.out.print(n + " "); // printing the numbers
 
     }
 
