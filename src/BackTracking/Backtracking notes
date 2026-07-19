@@ -1,0 +1,18 @@
+let's dive into Backtracking! 🔥
+Backtracking is basically DFS + decision making + undo. Jab brute force try karte ho saare possibilities, lekin jahan galat ho jaaye wahan wapas jaake (backtrack) dusra option try karte ho.
+Core Idea (Simple Language mein)
+
+Choose → ek decision lo (number place karo, character pick karo, etc.)
+Explore → us decision ke saath aage badho (recursive call)
+Unchoose (Backtrack) → agar yeh path galat nikla toh decision wapas le lo aur next option try karo
+
+Yeh technique mostly constraints + constraints satisfy karne wale solutions dhoondne mein use hoti hai.
+
+Classic Problems (Order mein sikhte hain)
+We'll follow this flow:
+
+Subsets / Power Set
+Combinations (Combination Sum)
+Permutations
+N-Queens (most famous backtracking example)
+Sudoku (optional if time ho)
