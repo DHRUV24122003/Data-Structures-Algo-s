@@ -22,7 +22,7 @@ public class NKnights {
 
         if (col == board.length) {
             knight(board, row + 1, 0, knights);
-            return;
+            return;//
         }
 
         if (isSafe(board, row, col)) {
