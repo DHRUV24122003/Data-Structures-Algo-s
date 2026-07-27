@@ -5,7 +5,7 @@ import java.util.*;
 public class WordBreak {
     static void main() {
         String s = "welcometothekapilsharmashow";
-        List<String> dict = Arrays.asList("welcome", "to",
+        List<String> dict = Arrays.asList("welcome", "to", //method Arrays.asList is adding these values to a list
                 "the",
                 "kapil",
                 "sharma",
