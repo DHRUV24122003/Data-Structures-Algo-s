@@ -33,7 +33,7 @@ public class PalindromicPartitionString {
 
             // index se lekar end tak har possible cut try karo
             for (int i = index; i < s.length(); i++) {
-                // Current substring s[index...i] palindrome hai ya nahi
+                // Current substring s[index...i] palindrome hai ya nahi..
                 if (isPalindrome(s, index, i)) {
                     // Palindrome hai toh current list mein daalo
                     current.add(s.substring(index, i + 1));
