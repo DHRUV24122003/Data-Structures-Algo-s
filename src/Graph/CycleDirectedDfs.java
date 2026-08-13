@@ -4,35 +4,55 @@ import java.util.*;
 public class CycleDirectedDfs {
 
     //first of all make a function which checks visited or not
-    static boolean visitingNodes(int node , List<List<Integer>> graph, int []color) {
+    static boolean visitingNodes(int node , List<List<Integer>> graph, int []color,List<Integer> path) {
         // 0 → Not Visited
         // 1 → Visiting (Gray)
         // 2 → Visited (Black)
 
         //first of all mark the element as 1;
         color[node] = 1; //visiting (gray)
+        path.add(node); //current path me add karo
         for(int neighbour : graph.get(node)) {
             if(color[neighbour] == 1) { //  cycle  found
+               printCycle(path,neighbour);
                 return true;
             }
             if(color[neighbour] == 0) { //start with all the neighbours that are not visited yet
-                if(visitingNodes(neighbour, graph, color)){ //call the function and if found return true
+                if(visitingNodes(neighbour, graph, color,path)){ //call the function and if found return true
                     return true;
                 };
             }
             // If color[neighbour] == 2 (Black), ignore (already processed)
         }
+        path.remove(path.size() - 1);
         color[node] = 2; //hence mark all the nodes as visited ,black
         return false;
-
-
     }
+    //to print the cycle make a function
+
+    static void printCycle(List<Integer> path, int cycleStart){
+        System.out.print("cycle nodes : ");
+
+
+    boolean startPrinting = false ;
+    for(int node : path){
+        if (node == cycleStart) {
+            startPrinting = true;
+        }
+        if (startPrinting) {
+            System.out.print(node + " ");
+        }
+    }
+        System.out.print(cycleStart);  // cycle close
+        System.out.println();
+}
 
     static boolean hasCycle(int V, List<List<Integer>> graph) {
         int [] color = new int[V];
+        List<Integer> path = new ArrayList<>();
         for(int i = 0; i < V; i++) { // run a loop for all the nodes
             if(color[i] == 0){ // for all the nodes that are not visited
-                if(visitingNodes(i,graph,color)){ //if cycle found return true
+                if(visitingNodes(i,graph,color,path)){ //if cycle found return true
                     return true;
                 }
 
