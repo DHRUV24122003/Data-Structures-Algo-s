@@ -72,11 +72,17 @@ public class BellmanFord {
             List<Edge> edges = new ArrayList<>();
 
             // edges add kar rahe hain (jo example mein the)
-            edges.add(new Edge(0, 1, 4));
-            edges.add(new Edge(0, 2, 5));
-            edges.add(new Edge(1, 2, -3));
-            edges.add(new Edge(1, 3, 2));
-            edges.add(new Edge(2, 3, 4));
+//            edges.add(new Edge(0, 1, 4));
+//            edges.add(new Edge(0, 2, 5));
+//            edges.add(new Edge(1, 2, -3));
+//            edges.add(new Edge(1, 3, 2));
+//            edges.add(new Edge(2, 3, 4));
+
+
+
+            edges.add(new Edge(0, 1, 4));   // 0 → 1 (weight 4)
+            edges.add(new Edge(1, 2, 3));   // 1 → 2 (weight 3)
+            edges.add(new Edge(2, 1, -6));  // negative cycle
 
             // Bellman-Ford chalao
             int[] result = bellmanFord(V, edges, source);
