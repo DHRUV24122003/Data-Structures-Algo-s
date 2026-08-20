@@ -5,6 +5,7 @@ package Graph;
     public class MinStepsByKnight {
 
         //  8 possible moves of knight
+        //
         private static final int[] dx = {-2, -2, -1, -1, 1, 1, 2, 2};
         private static final int[] dy = {-1, 1, -2, 2, -2, 2, -1, 1};
 
