@@ -1,81 +1,80 @@
 package Graph;
 
 import java.util.*;
+
 public class CycleDirectedDfs {
 
-    //first of all make a function which checks visited or not
-    static boolean visitingNodes(int node , List<List<Integer>> graph, int []color,List<Integer> path) {
+    // DFS function to detect cycle
+    static boolean dfs(int node, List<List<Integer>> graph, int[] color, List<Integer> path) {
         // 0 → Not Visited
         // 1 → Visiting (Gray)
         // 2 → Visited (Black)
 
-        //first of all mark the element as 1;
-        color[node] = 1; //visiting (gray)
-        path.add(node); //current path me add karo
-        for(int neighbour : graph.get(node)) {
-            if(color[neighbour] == 1) { //  cycle  found
-               printCycle(path,neighbour);
+        color[node] = 1;          // Mark as Visiting
+        path.add(node);           // Add to current path
+
+        for (int neighbour : graph.get(node)) {
+            if (color[neighbour] == 1) {
+                // Cycle found
+                printCycle(path, neighbour);
                 return true;
             }
-            if(color[neighbour] == 0) { //start with all the neighbours that are not visited yet
-                if(visitingNodes(neighbour, graph, color,path)){ //call the function and if found return true
-                    return true;
-                };
-            }
-            // If color[neighbour] == 2 (Black), ignore (already processed)
-        }
-        path.remove(path.size() - 1);
-        color[node] = 2; //hence mark all the nodes as visited ,black
-        return false;
-    }
-    //to print the cycle make a function
 
-    static void printCycle(List<Integer> path, int cycleStart){
-        System.out.print("cycle nodes : ");
-
-
-    boolean startPrinting = false ;
-    for(int node : path){
-        if (node == cycleStart) {
-            startPrinting = true;
-        }
-        if (startPrinting) {
-            System.out.print(node + " ");
-        }
-    }
-        System.out.print(cycleStart);  // cycle close
-        System.out.println();
-}
-
-    static boolean hasCycle(int V, List<List<Integer>> graph) {
-        int [] color = new int[V];
-        List<Integer> path = new ArrayList<>();
-        for(int i = 0; i < V; i++) { // run a loop for all the nodes
-            if(color[i] == 0){ // for all the nodes that are not visited
-                if(visitingNodes(i,graph,color,path)){ //if cycle found return true
+            if (color[neighbour] == 0) {
+                if (dfs(neighbour, graph, color, path)) {
                     return true;
                 }
-
             }
-
+            // If color == 2 → already processed, ignore
         }
-        return false; //else return false no cycle found
 
-
+        // Backtrack
+        path.remove(path.size() - 1);
+        color[node] = 2;          // Mark as Visited
+        return false;
     }
 
+    // Function to print the cycle
+    static void printCycle(List<Integer> path, int cycleStart) {
+        System.out.print("Cycle nodes: ");
 
+        boolean startPrinting = false;
+        for (int node : path) {
+            if (node == cycleStart) {
+                startPrinting = true;
+            }
+            if (startPrinting) {
+                System.out.print(node + " → ");
+            }
+        }
+        System.out.print(cycleStart);  // cycle close
+        System.out.println();
+    }
 
-public static void main(String[] args) {
+    // Main function to check cycle in the whole graph
+    static boolean hasCycle(int V, List<List<Integer>> graph) {
+        int[] color = new int[V];
+        List<Integer> path = new ArrayList<>();
+
+        for (int i = 0; i < V; i++) {
+            if (color[i] == 0) {
+                if (dfs(i, graph, color, path)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
         int V = 4;
 
-        // Create graph
         List<List<Integer>> graph = new ArrayList<>();
         for (int i = 0; i < V; i++) {
             graph.add(new ArrayList<>());
         }
 
-        // -------- Example 1: Cycle hai (1 → 2 → 3 → 1) --------
+        // Example: Cycle hai (1 → 2 → 3 → 1)
         graph.get(0).add(1);
         graph.get(1).add(2);
         graph.get(2).add(3);
@@ -86,12 +85,8 @@ public static void main(String[] args) {
         } else {
             System.out.println("No Cycle");
         }
+    }
 }
-}
-
-
-
-
 
 //algorithm
 //In the first function start with intializing node as 1 means visiting
