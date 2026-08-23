@@ -53,7 +53,7 @@ import java.util.*;
 
             // -------- Example: Cycle hai --------
             // 0 → 1 → 2 → 3
-            //      ↑_______│  (3 → 1)
+            //      ↑______│  (3 → 1)
             graph.get(0).add(1);
             graph.get(1).add(2);
             graph.get(2).add(3);
