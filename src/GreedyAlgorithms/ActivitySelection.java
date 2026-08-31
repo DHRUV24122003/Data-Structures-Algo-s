@@ -64,6 +64,7 @@ public class ActivitySelection {
         System.out.println("Selected Activities:");
         for (Activity act : result) {
             System.out.println(act.name + " -> Start: " + act.start + ", Finish: " + act.finish);
+            //
         }
     }
 }
