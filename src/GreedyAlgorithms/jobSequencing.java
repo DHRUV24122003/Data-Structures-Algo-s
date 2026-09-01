@@ -20,8 +20,7 @@ public class jobSequencing {
         //now sort the jobs in descending order of profits
         //highest profit first
 
-        Collections.sort(jobs, (a, b) -> a[1] - b[1]);
-
+        Collections.sort(jobs, (a, b) -> b[1] - a[1]);
         //find maximum deadline
 
 
@@ -45,7 +44,7 @@ public class jobSequencing {
 
             //start from deadline and go backwards to find free slot
             for (int j = d; j > 0; j--) {
-                if (slot[j] != -1) {
+                if (slot[j] == -1) {
                     //free slot found
 
                     slot[j] = 1; // mark as occupied;
@@ -82,3 +81,53 @@ public class jobSequencing {
 }
 
 
+
+
+//to reduce time complexity
+
+//class Solution {
+//    public ArrayList<Integer> jobSequencing(int[] deadline, int[] profit) {
+//        // code here
+//        int n = deadline.length;
+//
+//        // Step 1: Jobs ko store karo {deadline, profit}
+//        ArrayList<int[]> jobs = new ArrayList<>();
+//        for (int i = 0; i < n; i++) {
+//            jobs.add(new int[]{deadline[i], profit[i]});
+//        }
+//
+//        // Step 2: Deadline ke according ascending order mein sort karo
+//        Collections.sort(jobs, (a, b) -> a[0] - b[0]);
+//
+//        // Step 3: Min Heap (PriorityQueue) - smallest profit pehle
+//        PriorityQueue<Integer> pq = new PriorityQueue<>();
+//
+//        for (int[] job : jobs) {
+//            int d = job[0];
+//            int p = job[1];
+//
+//            if (pq.size() < d) {
+//                // Agar slot available hai toh add kar do
+//                pq.add(p);
+//            }
+//            else if (!pq.isEmpty() && pq.peek() < p) {
+//                // Agar current job better hai toh lowest profit wale ko replace kar do
+//                pq.poll();
+//                pq.add(p);
+//            }
+//        }
+//
+//        // Step 4: Result calculate karo
+//        int countJobs = pq.size();
+//        int maxProfit = 0;
+//
+//        while (!pq.isEmpty()) {
+//            maxProfit += pq.poll();
+//        }
+//
+//        ArrayList<Integer> result = new ArrayList<>();
+//        result.add(countJobs);
+//        result.add(maxProfit);
+//        return result;
+//    }
+//}
