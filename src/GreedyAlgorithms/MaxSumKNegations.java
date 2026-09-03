@@ -34,17 +34,7 @@ public class MaxSumKNegations {
 
         return sum;
     }
-
-
-
-
-
-
-
-
-
-
-     static void main(String[] args) {
+    static void main(String[] args) {
 
        MaxSumKNegations sol = new MaxSumKNegations();
 
