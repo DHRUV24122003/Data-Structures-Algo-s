@@ -24,7 +24,7 @@ public class LongestCommonSubstring {
 
                     } else {
 
-                        // Continuity broken
+                        // Continuity broken ...
                         dp[i][j] = 0;
                     }
                 }
