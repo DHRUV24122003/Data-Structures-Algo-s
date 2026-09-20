@@ -9,7 +9,7 @@ public class LongestCommonSubstring {
 
             int[][] dp = new int[n + 1][m + 1]; //initializing a 2d dp with the size of both of the string
 
-            int maxLength = 0; //initialize maxLength as 0
+            int maxLength = 0; //initialize     maxLength as 0
 
             for (int i = 1; i <= n; i++) { //for all the characters of String 1
 
