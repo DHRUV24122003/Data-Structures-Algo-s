@@ -17,7 +17,7 @@ public class FriendsPairing {
 
         for (int i = 3; i <= n; i++) {
 
-            // Case 1:  Current friend single rahe
+            //// Case 1:  Current friend single rahe
 
             long single = dp[i - 1];
 
