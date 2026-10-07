@@ -3,7 +3,7 @@ package DynamicProgramming;
 import java.util.Arrays;
 
 public class LongestPalindromicSubsequence {
-//longest palindromic sequence//
+//longest palindromic sequence
     static int solve(String s1 , String s2, int i , int j ,int [][]dp) {
         if(i == s1.length() || j == s2.length()){
             return 0;
