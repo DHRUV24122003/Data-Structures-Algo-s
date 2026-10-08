@@ -58,7 +58,6 @@ public class LongestPalindromicSubsequence {
         String s = "agbdba";
 
         System.out.println(
-                longestPalindromicSubsequence(s)
-        );
+                longestPalindromicSubsequence(s));
     }
 }
