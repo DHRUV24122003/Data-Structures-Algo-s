@@ -3,7 +3,7 @@ package DynamicProgramming;
 public class Knapsack {
 
     public static int solve(int index, int capacity, int[] val, int[] wt) {
-        //base case
+        //base case //
 
         if (index == val.length || capacity == 0) {
             return 0;
