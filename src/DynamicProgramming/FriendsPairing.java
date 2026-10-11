@@ -4,7 +4,7 @@ public class FriendsPairing {
 
     public static long countWays(int n) {
 
-        // Base cases
+        //Base cases
         if (n <= 2) {
             return n;
         }
