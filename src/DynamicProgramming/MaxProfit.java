@@ -131,7 +131,6 @@ public class MaxProfit {
 
 
 
-            // dp[index][buy][transactionsLeft]
 
             // index -> current day
             // buy -> 1 = can buy
