@@ -132,7 +132,7 @@ public class MaxProfit {
 
 
 
-            // index -> current day
+
             // buy -> 1 = can buy
             //        0 = holding stock / can sell
             // transactionsLeft -> kitni transactions remaining hain
