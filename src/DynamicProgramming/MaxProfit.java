@@ -134,7 +134,7 @@ public class MaxProfit {
 
 
 
-            //        0 = holding stock / can sell
+
             // transactionsLeft -> kitni transactions remaining hain
             int[][][] dp = new int[n][2][k + 1];
 
