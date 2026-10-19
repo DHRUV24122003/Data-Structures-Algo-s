@@ -9,7 +9,6 @@ public class MaxProfit {
                          int transactionsLeft,
                          int[][][] dp) {
 
-            // BASE CASE 1:
             // Saare days khatam ho gaye
             if (index == prices.length) {
                 return 0;
