@@ -9,7 +9,6 @@ public class MaxProfit {
                          int transactionsLeft,
                          int[][][] dp) {
 
-            // Saare days khatam ho gaye
             if (index == prices.length) {
                 return 0;
             }
