@@ -13,7 +13,7 @@ public class MaxProfit {
                 return 0;
             }
 
-            // BASE CASE 2:
+
             // K transactions complete ho chuki hain
             if (transactionsLeft == 0) {
                 return 0;
