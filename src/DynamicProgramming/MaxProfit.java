@@ -25,7 +25,7 @@ public class MaxProfit {
             }
 
 
-            // CASE 1:
+
             // Hum currently BUY kar sakte hain
             if (buy == 1) {
 
