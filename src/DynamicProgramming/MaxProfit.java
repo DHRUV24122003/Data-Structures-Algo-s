@@ -26,7 +26,6 @@ public class MaxProfit {
 
 
 
-            // Hum currently BUY kar sakte hain
             if (buy == 1) {
 
                 // OPTION 1: Aaj stock BUY karo
