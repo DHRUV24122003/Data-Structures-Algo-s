@@ -19,7 +19,7 @@ public class MaxProfit {
                 return 0;
             }
 
-            // Agar current state already calculate ho chuki hai
+
             if (dp[index][buy][transactionsLeft] != -1) {
                 return dp[index][buy][transactionsLeft];
             }
