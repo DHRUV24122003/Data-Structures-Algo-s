@@ -28,7 +28,7 @@ public class MaxProfit {
 
             if (buy == 1) {
 
-                // OPTION 1: Aaj stock BUY karo
+
                 // Buy karne par paise spend ho rahe hain
                 // isliye price subtract hoga.
                 //
