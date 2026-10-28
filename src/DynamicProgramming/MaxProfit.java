@@ -29,7 +29,7 @@ public class MaxProfit {
             if (buy == 1) {
 
 
-                // isliye price subtract hoga.
+
                 //
                 // Buy ke baad stock hold kar rahe hain,
                 // isliye buy = 0
