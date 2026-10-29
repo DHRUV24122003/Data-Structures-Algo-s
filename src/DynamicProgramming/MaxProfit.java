@@ -30,8 +30,7 @@ public class MaxProfit {
 
 
 
-                //
-                // Buy ke baad stock hold kar rahe hain,
+
                 // isliye buy = 0
                 //
                 // Transaction abhi complete nahi hui,
