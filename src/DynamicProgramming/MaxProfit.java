@@ -31,7 +31,7 @@ public class MaxProfit {
 
 
 
-                // isliye buy = 0
+
                 //
                 // Transaction abhi complete nahi hui,
                 // isliye transactionsLeft same rahega.
