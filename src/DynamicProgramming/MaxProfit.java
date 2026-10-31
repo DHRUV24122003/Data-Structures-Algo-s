@@ -32,8 +32,7 @@ public class MaxProfit {
 
 
 
-                //
-                // Transaction abhi complete nahi hui,
+
                 // isliye transactionsLeft same rahega.
                 int buyStock =
                         -prices[index]
