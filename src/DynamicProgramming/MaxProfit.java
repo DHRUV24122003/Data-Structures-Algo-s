@@ -33,7 +33,7 @@ public class MaxProfit {
 
 
 
-                // isliye transactionsLeft same rahega.
+
                 int buyStock =
                         -prices[index]
                                 + solve(
