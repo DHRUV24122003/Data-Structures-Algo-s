@@ -45,7 +45,7 @@ public class MaxProfit {
                         );
 
 
-                // OPTION 2:
+
                 // Aaj stock mat kharido.
                 // Next day par chale jao.
                 int skip =
