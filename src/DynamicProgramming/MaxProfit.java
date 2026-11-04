@@ -46,8 +46,8 @@ public class MaxProfit {
 
 
 
-                // Aaj stock mat kharido.
-                // Next day par chale jao.
+
+
                 int skip =
                         solve(
                                 prices,
