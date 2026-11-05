@@ -58,7 +58,7 @@ public class MaxProfit {
                         );
 
 
-                // Maximum profit choose karo
+
                 dp[index][buy][transactionsLeft] =
                         Math.max(buyStock, skip);
             }
