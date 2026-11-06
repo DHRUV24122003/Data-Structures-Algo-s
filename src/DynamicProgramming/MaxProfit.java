@@ -143,7 +143,7 @@ public class MaxProfit {
             }
 
 
-            // Day 0 se start
+
             // buy = 1 because initially koi stock nahi hai
             // k transactions available hain
             return solve(
