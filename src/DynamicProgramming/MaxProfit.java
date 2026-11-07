@@ -144,7 +144,6 @@ public class MaxProfit {
 
 
 
-            // buy = 1 because initially koi stock nahi hai
             // k transactions available hain
             return solve(
                     prices,
