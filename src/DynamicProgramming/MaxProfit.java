@@ -144,7 +144,6 @@ public class MaxProfit {
 
 
 
-            // k transactions available hain
             return solve(
                     prices,
                     0,
