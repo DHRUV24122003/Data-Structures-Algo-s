@@ -92,7 +92,7 @@ public class MaxProfit {
                         );
 
 
-                // OPTION 2:
+
                 // Aaj sell nahi karna.
                 // Stock HOLD karo.
                 //
