@@ -94,7 +94,7 @@ public class MaxProfit {
 
 
 
-                // Stock HOLD karo.
+
                 //
                 // Next day chale jao,
                 // buy = 0 hi rahega.
