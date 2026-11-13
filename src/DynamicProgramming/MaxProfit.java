@@ -69,7 +69,7 @@ public class MaxProfit {
             // Matlab hum already stock hold kar rahe hain
             else {
 
-                // OPTION 1:
+
                 // Stock SELL karo.
                 //
                 // Sell karne par paise milenge,
