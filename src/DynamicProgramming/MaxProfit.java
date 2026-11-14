@@ -70,7 +70,7 @@ public class MaxProfit {
             else {
 
 
-                // Stock SELL karo.
+
                 //
                 // Sell karne par paise milenge,
                 // isliye price ADD hoga.
