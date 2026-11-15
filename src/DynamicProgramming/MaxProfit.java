@@ -71,8 +71,7 @@ public class MaxProfit {
 
 
 
-                //
-                // Sell karne par paise milenge,
+
                 // isliye price ADD hoga.
                 //
                 // Sell ke baad dobara BUY kar sakte hain
