@@ -73,8 +73,7 @@ public class MaxProfit {
 
 
 
-                //
-                // Sell ke baad dobara BUY kar sakte hain
+
                 // therefore buy = 1.
                 //
                 // BUY + SELL complete hua,
