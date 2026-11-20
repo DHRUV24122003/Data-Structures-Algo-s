@@ -74,7 +74,7 @@ public class MaxProfit {
 
 
 
-                // therefore buy = 1.
+
                 //
                 // BUY + SELL complete hua,
                 // therefore ek transaction complete:
