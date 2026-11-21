@@ -75,8 +75,7 @@ public class MaxProfit {
 
 
 
-                //
-                // BUY + SELL complete hua,
+
                 // therefore ek transaction complete:
                 // transactionsLeft - 1
                 int sellStock =
