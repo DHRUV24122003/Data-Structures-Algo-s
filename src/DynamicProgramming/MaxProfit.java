@@ -76,7 +76,7 @@ public class MaxProfit {
 
 
 
-                // therefore ek transaction complete:
+
                 // transactionsLeft - 1
                 int sellStock =
                         prices[index]
