@@ -77,7 +77,7 @@ public class MaxProfit {
 
 
 
-                // transactionsLeft - 1
+
                 int sellStock =
                         prices[index]
                                 + solve(
