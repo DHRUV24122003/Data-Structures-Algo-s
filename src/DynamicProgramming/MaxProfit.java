@@ -92,8 +92,7 @@ public class MaxProfit {
 
 
 
-                //
-                // Next day chale jao,
+                /
                 // buy = 0 hi rahega.
                 int hold =
                         solve(
