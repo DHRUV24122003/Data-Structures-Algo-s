@@ -64,7 +64,7 @@ public class MaxProfit {
             }
 
 
-            // CASE 2:
+
             // buy == 0
             // Matlab hum already stock hold kar rahe hain
             else {
