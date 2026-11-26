@@ -92,8 +92,7 @@ public class MaxProfit {
 
 
 
-                /
-                // buy = 0 hi rahega.
+
                 int hold =
                         solve(
                                 prices,
